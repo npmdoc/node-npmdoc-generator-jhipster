@@ -1,0 +1,610 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://jhipster.github.io/">generator-jhipster (v4.3.0)</a>
+</h1>
+<h4>Spring Boot + Angular in one handy generator</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.generator-jhipster">module generator-jhipster</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">generator-jhipster.</span>cleanup</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">generator-jhipster.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.generator-jhipster.cleanup">module generator-jhipster.cleanup</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.cleanup.cleanupOldFiles">
+            function <span class="apidocSignatureSpan">generator-jhipster.cleanup.</span>cleanupOldFiles
+            <span class="apidocSignatureSpan">(generator, javaDir, testDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.cleanup.cleanupOldServerFiles">
+            function <span class="apidocSignatureSpan">generator-jhipster.cleanup.</span>cleanupOldServerFiles
+            <span class="apidocSignatureSpan">(generator, javaDir, testDir)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.generator-jhipster.util">module generator-jhipster.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.classify">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>classify
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.copyWebResource">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>copyWebResource
+            <span class="apidocSignatureSpan">(source, dest, regex, type, generator, opt = {}, template)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.deepFind">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>deepFind
+            <span class="apidocSignatureSpan">(obj, path, placeholder)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.getJavadoc">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>getJavadoc
+            <span class="apidocSignatureSpan">(text, indentSize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.renderContent">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>renderContent
+            <span class="apidocSignatureSpan">(source, generator, context, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.replaceContent">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>replaceContent
+            <span class="apidocSignatureSpan">(args, generator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.rewrite">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>rewrite
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.rewriteFile">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>rewriteFile
+            <span class="apidocSignatureSpan">(args, generator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-jhipster.util.rewriteJSONFile">
+            function <span class="apidocSignatureSpan">generator-jhipster.util.</span>rewriteJSONFile
+            <span class="apidocSignatureSpan">(filePath, rewriteFile, generator)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.generator-jhipster" id="apidoc.module.generator-jhipster">module generator-jhipster</a></h1>
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.generator-jhipster.cleanup" id="apidoc.module.generator-jhipster.cleanup">module generator-jhipster.cleanup</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.cleanup.cleanupOldFiles" id="apidoc.element.generator-jhipster.cleanup.cleanupOldFiles">
+        function <span class="apidocSignatureSpan">generator-jhipster.cleanup.</span>cleanupOldFiles
+        <span class="apidocSignatureSpan">(generator, javaDir, testDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cleanupOldFiles(generator, javaDir, testDir) {
+    if (generator.isJhipsterVersionLessThan('3.2.0')) {
+        // removeFile and removeFolder methods should be called here for files and folders to cleanup
+        generator.removeFile(`${ANGULAR_DIR}components/form/uib-pager.config.js`);
+        generator.removeFile(`${ANGULAR_DIR}components/form/uib-pagination.config.js`);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.cleanup.cleanupOldServerFiles" id="apidoc.element.generator-jhipster.cleanup.cleanupOldServerFiles">
+        function <span class="apidocSignatureSpan">generator-jhipster.cleanup.</span>cleanupOldServerFiles
+        <span class="apidocSignatureSpan">(generator, javaDir, testDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cleanupOldServerFiles(generator, javaDir, testDir) {
+    if (generator.isJhipsterVersionLessThan('3.5.0')) {
+        generator.removeFile(`${javaDir}domain/util/JSR310DateTimeSerializer.java`);
+        generator.removeFile(`${javaDir}domain/util/JSR310LocalDateDeserializer.java`);
+    }
+    if (generator.isJhipsterVersionLessThan('3.6.0')) {
+        generator.removeFile(`${javaDir}config/HerokuDatabaseConfiguration.java`);
+    }
+    if (generator.isJhipsterVersionLessThan('3.8.1')) {
+        generator.removeFile(`${javaDir}config/JacksonConfiguration.java`);
+    }
+    if (generator.isJhipsterVersionLessThan('3.10.0')) {
+        generator.removeFile(`${javaDir}config/CloudMongoDbConfiguration.java`);
+        generator.removeFile(`${javaDir}security/CustomAccessDeniedHandler.java`);
+        generator.removeFile(`${javaDir}web/filter/CsrfCookieGeneratorFilter.java`);
+    }
+    if (generator.isJhipsterVersionLessThan('3.11.0')) {
+        generator.removeFile(`${CLIENT_MAIN_SRC_DIR}app/layouts/navbar/active-link.directive.js`);
+    }
+    if (generator.isJhipsterVersionLessThan('3.12.0')) {
+        generator.removeFile(`${javaDir}config/hazelcast/HazelcastCacheRegionFactory.java`);
+        generator.removeFile(`${javaDir}config/hazelcast/package-info.java`);
+    }
+    if (generator.isJhipsterVersionLessThan('4.0.0')) {
+        generator.removeFile(`${javaDir}async/ExceptionHandlingAsyncTaskExecutor.java`);
+        generator.removeFile(`${javaDir}async/package-info.java`);
+        generator.removeFile(`${javaDir}config/jHipsterProperties.java`);
+        generator.removeFile(`${javaDir}config/LoadBalancedResourceDetails.java`);
+        generator.removeFile(`${javaDir}config/ElasticSearchConfiguration.java`);
+        generator.removeFile(`${javaDir}config/apidoc/package-info.java`);
+        generator.removeFile(`${javaDir}config/apidoc/PageableParameterBuilderPlugin.java`);
+        generator.removeFile(`${javaDir}config/apidoc/SwaggerConfiguration.java`);
+        generator.removeFile(`${javaDir}config/jcache/SpringCacheRegionFactory.java`);
+        generator.removeFile(`${javaDir}config/jcache/SpringCacheRegionFactory.java`);
+        generator.removeFile(`${javaDir}config/liquibase/AsyncSpringLiquibase.java`);
+        generator.removeFile(`${javaDir}config/liquibase/package-info.java`);
+        generator.removeFile(`${javaDir}config/locale/AngularCookieLocaleResolver.java`);
+        generator.removeFile(`${javaDir}config/locale/package-info.java`);
+        generator.removeFile(`${javaDir}domain/util/FixedH2Dialect.java`);
+        generator.removeFile(`${javaDir}domain/util/FixedPostgreSQL82Dialect`);
+        generator.removeFile(`${javaDir}domain/util/JSR310DateConverters.java`);
+        generator.removeFile(`${javaDir}domain/util/JSR310PersistenceConverters.java`);
+        generator.removeFile(`${javaDir}security/AjaxAuthenticationFailureHandler.java`);
+        generator.removeFile(`${javaDir}security/AjaxAuthenticationSuccessHandler.java`);
+        generator.removeFile(`${javaDir}security/AjaxLogoutSuccessHandler.java`);
+        generator.removeFile(`${javaDir}security/CustomPersistentRememberMeServices.java`);
+        generator.removeFile(`${javaDir}security/Http401UnauthorizedEntryPoint.java`);
+        generator.removeFile(`${javaDir}security/UserDetailsService.java`);
+        generator.removeFile(`${javaDir}web/filter/CachingHttpHeadersFilter.java`);
+        generator.removeFile(`${javaDir}web/filter/package-info.java`);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.generator-jhipster.util" id="apidoc.module.generator-jhipster.util">module generator-jhipster.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.classify" id="apidoc.element.generator-jhipster.util.classify">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>classify
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function classify(string) {
+    string = string.replace(/[\W_](\w)/g, match =&gt; ` ${match[1].toUpperCase()}`).replace(/\s/g, '');
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.copyWebResource" id="apidoc.element.generator-jhipster.util.copyWebResource">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>copyWebResource
+        <span class="apidocSignatureSpan">(source, dest, regex, type, generator, opt = {}, template)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function copyWebResource(source, dest, regex, type, generator, opt = {}, template) {
+    if (generator.enableTranslation) {
+        generator.template(source, dest, generator, opt);
+    } else {
+        renderContent(source, generator, generator, opt, (body) =&gt; {
+            body = body.replace(regex, '');
+            switch (type) {
+            case 'html' :
+                body = replacePlaceholders(body, generator);
+                break;
+            case 'js' :
+                body = replaceTitle(body, generator);
+                break;
+            default:
+                break;
+            }
+            generator.fs.write(dest, body);
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    regex = new RegExp([
+        /( (data-t|jhiT)ranslate="([a-zA-Z0-9 +{}'](\.)?)+")/,                    // data-translate or jhiTranslate
+        /( translate(-v|V)alues="\{([a-zA-Z]|\d|:|\{|\}|\[|\]|-|'|\s|\.)*?\}")/,    // translate-values or translateValues
+        /( translate-compile)/,                                                         // translate-compile
+        /( translate-value-max="[0-9{}()|]*")/,                                   // translate-value-max
+    ].map(r =&gt; r.source).join('|'), 'g');
+
+    jhipsterUtils.<span class="apidocCodeKeywordSpan">copyWebResource</span>(source, dest, regex, 'html', _this, opt,
+template);
+    break;
+case 'stripJs' :
+    regex = new RegExp([
+        /(,[\s]*(resolve):[\s]*[{][\s]*(translatePartialLoader)['a-zA-Z0-9$,(){.&lt;%=\-&gt;;\s:[\]]*(;[\s]*\}\][\s]*\}))/, //
+ng1 resolve block
+        /([\s]import\s\{\s?JhiLanguageService\s?\}\sfrom\s["|']ng-jhipster["|'];)/,       // ng2 import jhiLanguageService
+        /(,?\s?JhiLanguageService,?\s?)/,                                                          // ng2 import jhiLanguageService
+        /(private\s[a-zA-Z0-9]*(L|l)anguageService\s?:\s?JhiLanguageService\s?,*[\s]*)/,          // ng2 jhiLanguageService constructor
+ argument
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.deepFind" id="apidoc.element.generator-jhipster.util.deepFind">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>deepFind
+        <span class="apidocSignatureSpan">(obj, path, placeholder)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deepFind(obj, path, placeholder) {
+    const paths = path.split('.');
+    let current = obj;
+    if (placeholder) { // dirty fix for placeholders, the json files needs to be corrected
+        paths[paths.length - 2] = `${paths[paths.length - 2]}.${paths[paths.length - 1]}`;
+        paths.pop();
+    }
+    for (let i = 0; i &lt; paths.length; ++i) {
+        if (current[paths[i]] === undefined) {
+            return undefined;
+        }
+        current = current[paths[i]];
+    }
+    return current;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.getJavadoc" id="apidoc.element.generator-jhipster.util.getJavadoc">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>getJavadoc
+        <span class="apidocSignatureSpan">(text, indentSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getJavadoc(text, indentSize) {
+    let javadoc = `${_.repeat(' ', indentSize)}/**`;
+    const rows = text.split('\n');
+    for (let i = 0; i &lt; rows.length; i++) {
+        javadoc = `${javadoc}\n${_.repeat(' ', indentSize)} * ${rows[i]}`;
+    }
+    javadoc = `${javadoc}\n${_.repeat(' ', indentSize)} */`;
+    return javadoc;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+getDefaultAppName() {
+    return (/^[a-zA-Z0-9_]+$/.test(path.basename(process.cwd()))) ? path.basename(process.cwd()) : 'jhipster';
+}
+
+formatAsClassJavadoc(text) {
+    return jhipsterUtils.<span class="apidocCodeKeywordSpan">getJavadoc</span>(text, 0);
+}
+
+formatAsFieldJavadoc(text) {
+    return jhipsterUtils.getJavadoc(text, 4);
+}
+
+formatAsApiDescription(text) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.renderContent" id="apidoc.element.generator-jhipster.util.renderContent">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>renderContent
+        <span class="apidocSignatureSpan">(source, generator, context, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderContent(source, generator, context, options, cb) {
+    ejs.renderFile(generator.templatePath(source), context, options, (err, res) =&gt; {
+        if (!err) {
+            cb(res);
+        } else {
+            generator.error(`Copying template ${source} failed. [${err}]`);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {*} generator
+ * @param {*} options
+ * @param {*} context
+ */
+template(source, destination, generator, options = {}, context) {
+    const _this = generator || this;
+    const _context = context || _this;
+    jhipsterUtils.<span class="apidocCodeKeywordSpan">renderContent</span>(source, _this, _context, options, (res) =&gt; {
+        _this.fs.write(_this.destinationPath(destination), res);
+    });
+}
+
+/**
+ * Utility function to copy files.
+ *
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.replaceContent" id="apidoc.element.generator-jhipster.util.replaceContent">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>replaceContent
+        <span class="apidocSignatureSpan">(args, generator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replaceContent(args, generator) {
+    args.path = args.path || process.cwd();
+    const fullPath = path.join(args.path, args.file);
+
+    const re = args.regex ? new RegExp(args.pattern, 'g') : args.pattern;
+
+    let body = generator.fs.read(fullPath);
+    body = body.replace(re, args.content);
+    generator.fs.write(fullPath, body);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} fullPath - path of the source file to rewrite
+ * @param {string} pattern - pattern to look for where content will be replaced
+ * @param {string} content - content to be written
+ * @param {string} regex - true if pattern is regex
+ */
+replaceContent(filePath, pattern, content, regex) {
+    try {
+        jhipsterUtils.<span class="apidocCodeKeywordSpan">replaceContent</span>({
+            file: filePath,
+            pattern,
+            content,
+            regex
+        }, this);
+    } catch (e) {
+        this.log(chalk.yellow('\nUnable to find ') + filePath + chalk.yellow(' or missing required pattern. File
+rewrite failed.\n') + e);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.rewrite" id="apidoc.element.generator-jhipster.util.rewrite">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>rewrite
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rewrite(args) {
+    // check if splicable is already in the body text
+    const re = new RegExp(args.splicable.map(line =&gt; `\\s*${escapeRegExp(line)}`).join('\n'));
+
+    if (re.test(args.haystack)) {
+        return args.haystack;
+    }
+
+    const lines = args.haystack.split('\n');
+
+    let otherwiseLineIndex = -1;
+    lines.forEach((line, i) =&gt; {
+        if (line.indexOf(args.needle) !== -1) {
+            otherwiseLineIndex = i;
+        }
+    });
+
+    let spaces = 0;
+    while (lines[otherwiseLineIndex].charAt(spaces) === ' ') {
+        spaces += 1;
+    }
+
+    let spaceStr = '';
+
+    while ((spaces -= 1) &gt;= 0) { // eslint-disable-line no-cond-assign
+        spaceStr += ' ';
+    }
+
+    lines.splice(otherwiseLineIndex, 0, args.splicable.map(line =&gt; spaceStr + line).join('\n'));
+
+    return lines.join('\n');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.rewriteFile" id="apidoc.element.generator-jhipster.util.rewriteFile">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>rewriteFile
+        <span class="apidocSignatureSpan">(args, generator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rewriteFile(args, generator) {
+    args.path = args.path || process.cwd();
+    const fullPath = path.join(args.path, args.file);
+
+    args.haystack = generator.fs.read(fullPath);
+    const body = rewrite(args);
+    generator.fs.write(fullPath, body);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} clientFramework - The name of the client framework
+ */
+addElementToMenu(routerName, glyphiconName, enableTranslation, clientFramework) {
+    let navbarPath;
+    try {
+        if (clientFramework === 'angular1') {
+            navbarPath = `${CLIENT_MAIN_SRC_DIR}app/layouts/navbar/navbar.html`;
+            jhipsterUtils.<span class="apidocCodeKeywordSpan">rewriteFile</span>({
+                file: navbarPath,
+                needle: 'jhipster-needle-add-element-to-menu',
+                splicable: [`&lt;li ui-sref-active="active"&gt;
+                            &lt;a ui-sref="${routerName}" ng-click="vm.collapseNavbar()"&gt;
+                                &lt;span class="glyphicon glyphicon-${glyphiconName}"&gt;&lt;/span&gt;&amp;nbsp
+;
+                                &lt;span ${enableTranslation ? `data-translate="global.menu.${routerName}"` : '&amp;#
+x27;}&gt;${_.startCase(routerName)}&lt;/span&gt;
+                            &lt;/a&gt;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-jhipster.util.rewriteJSONFile" id="apidoc.element.generator-jhipster.util.rewriteJSONFile">
+        function <span class="apidocSignatureSpan">generator-jhipster.util.</span>rewriteJSONFile
+        <span class="apidocSignatureSpan">(filePath, rewriteFile, generator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rewriteJSONFile(filePath, rewriteFile, generator) {
+    const jsonObj = generator.fs.readJSON(filePath);
+    rewriteFile(jsonObj, generator);
+    generator.fs.writeJSON(filePath, jsonObj, null, 4);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {string} key - Key for the entry
+ * @param {string} value - Default translated value or object with multiple key and translated value
+ * @param {string} language - The language to which this translation should be added
+ */
+addGlobalTranslationKey(key, value, language) {
+    const fullPath = `${CLIENT_MAIN_SRC_DIR}i18n/${language}/global.json`;
+    try {
+        jhipsterUtils.<span class="apidocCodeKeywordSpan">rewriteJSONFile</span>(fullPath, (jsonObj) =&gt; {
+            jsonObj[key] = value;
+        }, this);
+    } catch (e) {
+        this.log(`${chalk.yellow('\nUnable to find ') + fullPath + chalk.yellow('. Reference to ')}(key: ${key
+}, value:${value})${chalk.yellow(' not added to global translations.\n')}`);
+    }
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
